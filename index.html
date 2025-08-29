@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>✅ Validador de Formulário</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>✅ Validador de Formulário</h1>
+    <p>Regras: e-mail com formato válido e senha com <strong>mínimo de 8 caracteres</strong>, pelo menos <strong>1 número</strong> e <strong>1 símbolo</strong>.</p>
+
+    <form id="form">
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="seuemail@exemplo.com" autocomplete="email" required>
+        <small id="email-erro" class="erro" aria-live="polite"></small>
+      </div>
+
+      <div class="field">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="********" autocomplete="new-password" required>
+        <small id="senha-erro" class="erro" aria-live="polite"></small>
+
+        <ul class="checklist" aria-live="polite">
+          <li id="req-len">Mínimo de 8 caracteres</li>
+          <li id="req-num">Contém pelo menos 1 número</li>
+          <li id="req-sym">Contém pelo menos 1 símbolo</li>
+        </ul>
+      </div>
+
+      <button type="submit" id="enviar" disabled>Enviar</button>
+      <p id="sucesso" class="sucesso" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
